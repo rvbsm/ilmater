@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "ilmater",
+  "version": "${version}",
+  "name": "Ilmater",
+  "description": "Portals have feelings too",
+  "authors": [
+    "rvbsm"
+  ],
+  "contact": {
+    "sources": "https://github.com/rvbsm/ilmater",
+    "issues": "https://github.com/rvbsm/ilmater/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/ilmater/icon.png",
+  "environment": "server",
+  "mixins": [
+    "ilmater.mixins.json"
+  ],
+  "depends": {
+    "java": ">=${javaVersion}",
+    "minecraft": "${minecraftVersion}",
+    "fabricloader": ">=0.16.0"
+  }
+}
