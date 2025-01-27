@@ -12,14 +12,25 @@
     "issues": "https://github.com/rvbsm/ilmater/issues"
   },
   "license": "MIT",
-  "icon": "assets/ilmater/icon.png",
-  "environment": "server",
+  "icon": "/assets/ilmater/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.rvbsm.ilmater.IlmaterExtension"
+    ]
+  },
   "mixins": [
     "ilmater.mixins.json"
   ],
   "depends": {
     "java": ">=${javaVersion}",
-    "minecraft": "${minecraftVersion}",
-    "fabricloader": ">=0.16.0"
+    "minecraft": ">=${minecraftVersion}",
+    "fabricloader": ">=0.16.0",
+    "carpet": ">=${carpetVersion}"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": "carpet"
+    }
   }
 }

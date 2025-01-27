@@ -1,0 +1,33 @@
+{
+  "carpet.category.ilmater": "Ilmater",
+
+  "carpet.rule.cryingPortals.desc": "Allows Crying Obsidian to be used in Nether portal frame",
+  "carpet.rule.commandPersonalRule.desc": "Enables /personalrule command to set per-player gamerules",
+  "carpet.rule.allowedPersonalRules.desc": "List of allowed gamerules for players to use",
+  "carpet.rule.allowedPersonalRules.extra": "Use csv, like 'keepInventory,naturalRegeneration' for multiple rules, or 'all' for everything",
+  "carpet.rule.dimensionDisplay.desc": "Shows players' current dimension in playerlist",
+  "carpet.rule.vaultCooldown.desc": "Adds rewards cooldown to vaults in Trial chambers",
+  "carpet.rule.vaultCooldown.extra": "Complex time like 2h30m is supported. 1d equals to the realtime day, 1c equals to the daylight cycle (20 minutes)",
+  "carpet.rule.loyalVoid.desc": "Tridents with Loyalty enchantment will not be consumed by the void and will return",
+  "carpet.rule.raidGambit.desc": "Using a goat horn applies the Glowing effect to raiders and makes a user their target",
+
+  "ilmater.command.personalrule.list.empty": "No personal rules were set",
+  "ilmater.command.personalrule.list.head": "Active personal rules:",
+  "ilmater.command.personalrule.list.rule": "- %s [%s] (gamerule: %s)",
+  "ilmater.command.personalrule.query": "Personal rule %s is currently set to: %s (gamerule: %s)",
+  "ilmater.command.personalrule.set": "Personal rule %s is now set to: %s (gamerule: %s)",
+  "ilmater.command.personalrule.activated": "Personal rule %s is activated and currently set to: %s (gamerule: %s)",
+  "ilmater.command.personalrule.deactivated": "Personal rule %s is deactivated (gamerule: %s)",
+
+  "ilmater.block.vault.cooldown": "You can open this vault again in ",
+
+  "ilmater.duration.soon": "a few moments",
+  "ilmater.duration.day": "day",
+  "ilmater.duration.days": "days",
+  "ilmater.duration.hour": "hour",
+  "ilmater.duration.hours": "hours",
+  "ilmater.duration.minute": "minute",
+  "ilmater.duration.minutes": "minutes",
+  "ilmater.duration.second": "second",
+  "ilmater.duration.seconds": "seconds"
+}

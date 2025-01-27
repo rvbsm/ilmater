@@ -15,24 +15,24 @@ group = "dev.rvbsm"
 base.archivesName = rootProject.name
 
 loom {
-    accessWidenerPath = rootProject.file("src/main/resources/${rootProject.name}.accesswidener")
+    // accessWidenerPath = rootProject.file("src/main/resources/${rootProject.name}.accesswidener")
 
     splitEnvironmentSourceSets()
     mods.register(name) {
         sourceSet("main")
-        sourceSet("client")
+//        sourceSet("client")
     }
 
     runConfigs.all {
         ideConfigGenerated(true)
-        runDir = rootProject.file("run").toString()
+        runDir = "run"
+        vmArgs("-Dmixin.debug.export=true")
     }
 }
 
 repositories {
     mavenCentral()
-    maven("https://maven.terraformersmc.com/releases")
-    maven("https://maven.isxander.dev/releases")
+    maven("https://masa.dy.fi/maven")
 }
 
 dependencies {
@@ -41,16 +41,16 @@ dependencies {
 
     modImplementation(libs.fabric.loader)
 
-    setOf<String>(
-    ).map { fabricApi.module(it, property("fabric.api").toString()) }.forEach(::modImplementation)
+    modImplementation("carpet:fabric-carpet:$minecraftTargetVersion-${property("api.carpet")}")
 }
 
 tasks {
     processResources {
         val properties = mapOf(
             "version" to "$version",
-            "minecraftVersion" to ">=$minecraftProjectVersion",
             "javaVersion" to javaVersion,
+            "minecraftVersion" to minecraftProjectVersion,
+            "carpetVersion" to "${project.property("api.carpet")}",
         )
 
         inputs.properties(properties)
@@ -97,7 +97,6 @@ publishMods {
             end = minecraftTargetVersion
         }
 
-        requires("fabric-api")
-        optional("modmenu", "yacl")
+        requires("carpet")
     }
 }
