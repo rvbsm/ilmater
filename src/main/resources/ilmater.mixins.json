@@ -3,7 +3,7 @@
   "package": "dev.rvbsm.ilmater.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "GoatHornItemMixin_attractRaid",
+    "GoatHornItemMixin_raidGambit",
     "NetherPortalMixin_cryingPortals",
     "ServerPlayerEntityMixin_dimensionDisplay",
     "TridentEntityMixin_loyalVoid",
