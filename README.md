@@ -26,61 +26,61 @@ Use csv, like 'keepInventory,naturalRegeneration' for multiple rules, or 'all' f
 <details>
 <summary>List of supported personal rules</summary>
 
-| Status                        | Gamerule                         | Note                                                       |
-|-------------------------------|----------------------------------|------------------------------------------------------------|
-| :white_check_mark:            | keepInventory                    | the player, or the attacker                                |
-| :white_check_mark:            | doMobLoot                        |                                                            |
-| :white_check_mark:            | projectilesCanBreakBlocks        | owner of the projectile                                    |
-| :white_check_mark:            | doTileDrops                      |                                                            |
-| :white_check_mark:            | doEntityDrops                    |                                                            |
-| :white_check_mark:            | naturalRegeneration              |                                                            |
-| :white_check_mark:            | disableRaids                     | the raid will be invalidated if all players disabled raids |
-| :white_check_mark:            | doInsomnia                       |                                                            |
-| :white_check_mark:            | doImmediateRespawn               |                                                            |
-| :white_check_mark:            | playersNetherPortalDefaultDelay  |                                                            |
-| :white_check_mark:            | playersNetherPortalCreativeDelay |                                                            |
-| :white_check_mark:            | drowningDamage                   |                                                            |
-| :white_check_mark:            | fallDamage                       |                                                            |
-| :white_check_mark:            | fireDamage                       |                                                            |
-| :white_check_mark:            | freezeDamage                     |                                                            |
-| :ballot_box_with_check:       | doPatrolSpawning                 |                                                            |
-| :ballot_box_with_check:       | doTraderSpawning                 |                                                            |
-| :white_check_mark:            | doWardenSpawning                 |                                                            |
-| :white_check_mark:            | forgiveDeadPlayers               |                                                            |
-| :white_check_mark:            | enderPearlsVanishOnDeath         |                                                            |
-| :negative_squared_cross_mark: | doFireTick                       | should not be available as personal                        |
-| :negative_squared_cross_mark: | mobGriefing                      | should not be available as personal                        |
-| :negative_squared_cross_mark: | doMobSpawning                    | don't wanna                                                |
-| :negative_squared_cross_mark: | commandBlockOutput               | should not be available as personal                        |
-| :negative_squared_cross_mark: | doDaylightCycle                  | no? i mean, send different daytime?                        |
-| :negative_squared_cross_mark: | logAdminCommands                 | should not be available as personal                        |
-| :negative_squared_cross_mark: | showDeathMessages                | should not be available as personal                        |
-| :negative_squared_cross_mark: | randomTickSpeed                  | should not be available as personal                        |
-| :negative_squared_cross_mark: | sendCommandFeedback              | should not be available as personal                        |
-| :negative_squared_cross_mark: | reducedDebugInfo                 | should not be available as personal                        |
-| :negative_squared_cross_mark: | spectatorsGenerateChunks         | don't wanna                                                |
-| :negative_squared_cross_mark: | spawnRadius                      | should not be available as personal                        |
-| :negative_squared_cross_mark: | disablePlayerMovementCheck       | should not be available as personal                        |
-| :negative_squared_cross_mark: | disableElytraMovementCheck       | should not be available as personal                        |
-| :negative_squared_cross_mark: | maxEntityCramming                | should not be available as personal                        |
-| :negative_squared_cross_mark: | doWeatherCycle                   | same as `doDaylightCycle`                                  |
-| :negative_squared_cross_mark: | doLimitedCrafting                | should not be available as personal                        |
-| :negative_squared_cross_mark: | maxCommandChainLength            | should not be available as personal                        |
-| :negative_squared_cross_mark: | maxCommandForkCount              | should not be available as personal                        |
-| :negative_squared_cross_mark: | commandModificationBlockLimit    | should not be available as personal                        |
-| :negative_squared_cross_mark: | announceAdvancements             | should not be available as personal                        |
-| :negative_squared_cross_mark: | universalAnger                   | should not be available as personal                        |
-| :negative_squared_cross_mark: | playersSleepingPercentage        | should not be available as personal                        |
-| :negative_squared_cross_mark: | blockExplosionDropDecay          | should not be available as personal                        |
-| :negative_squared_cross_mark: | mobExplosionDropDecay            | is not possible?                                           |
-| :negative_squared_cross_mark: | tntExplosionDropDecay            | is not possible?                                           |
-| :negative_squared_cross_mark: | snowAccumulationHeight           | should not be available as personal                        |
-| :negative_squared_cross_mark: | waterSourceConversion            | should not be available as personal                        |
-| :negative_squared_cross_mark: | lavaSourceConversion             | should not be available as personal                        |
-| :negative_squared_cross_mark: | globalSoundEvents                | should not be available as personal                        |
-| :negative_squared_cross_mark: | doVinesSpread                    | should not be available as personal                        |
-| :negative_squared_cross_mark: | minecartMaxSpeed                 | don't wanna / experimental                                 |
-| :negative_squared_cross_mark: | spawnChunkRadius                 | should not be available as personal                        |
+| Status     | Gamerule                         | Note                                                       |
+|------------|----------------------------------|------------------------------------------------------------|
+| ✅          | keepInventory                    | the player, or the attacker                                |
+| ✅          | doMobLoot                        |                                                            |
+| ✅          | projectilesCanBreakBlocks        | owner of the projectile                                    |
+| ✅          | doTileDrops                      |                                                            |
+| ✅          | doEntityDrops                    |                                                            |
+| ✅          | naturalRegeneration              |                                                            |
+| ✅          | disableRaids                     | the raid will be invalidated if all players disabled raids |
+| ✅          | doInsomnia                       |                                                            |
+| ✅          | doImmediateRespawn               |                                                            |
+| ✅          | playersNetherPortalDefaultDelay  |                                                            |
+| ✅          | playersNetherPortalCreativeDelay |                                                            |
+| ✅          | drowningDamage                   |                                                            |
+| ✅          | fallDamage                       |                                                            |
+| ✅          | fireDamage                       |                                                            |
+| ✅          | freezeDamage                     |                                                            |
+| not tested | doPatrolSpawning                 |                                                            |
+| not tested | doTraderSpawning                 |                                                            |
+| ✅          | doWardenSpawning                 |                                                            |
+| ✅          | forgiveDeadPlayers               |                                                            |
+| ✅          | enderPearlsVanishOnDeath         |                                                            |
+| ❌          | doFireTick                       | should not be available as personal                        |
+| ❌          | mobGriefing                      | should not be available as personal                        |
+| ❌          | doMobSpawning                    | don't wanna                                                |
+| ❌          | commandBlockOutput               | should not be available as personal                        |
+| ❌          | doDaylightCycle                  | no? i mean, send different daytime?                        |
+| ❌          | logAdminCommands                 | should not be available as personal                        |
+| ❌          | showDeathMessages                | should not be available as personal                        |
+| ❌          | randomTickSpeed                  | should not be available as personal                        |
+| ❌          | sendCommandFeedback              | should not be available as personal                        |
+| ❌          | reducedDebugInfo                 | should not be available as personal                        |
+| ❌          | spectatorsGenerateChunks         | don't wanna                                                |
+| ❌          | spawnRadius                      | should not be available as personal                        |
+| ❌          | disablePlayerMovementCheck       | should not be available as personal                        |
+| ❌          | disableElytraMovementCheck       | should not be available as personal                        |
+| ❌          | maxEntityCramming                | should not be available as personal                        |
+| ❌          | doWeatherCycle                   | same as `doDaylightCycle`                                  |
+| ❌          | doLimitedCrafting                | should not be available as personal                        |
+| ❌          | maxCommandChainLength            | should not be available as personal                        |
+| ❌          | maxCommandForkCount              | should not be available as personal                        |
+| ❌          | commandModificationBlockLimit    | should not be available as personal                        |
+| ❌          | announceAdvancements             | should not be available as personal                        |
+| ❌          | universalAnger                   | should not be available as personal                        |
+| ❌          | playersSleepingPercentage        | should not be available as personal                        |
+| ❌          | blockExplosionDropDecay          | should not be available as personal                        |
+| ❌          | mobExplosionDropDecay            | is not possible?                                           |
+| ❌          | tntExplosionDropDecay            | is not possible?                                           |
+| ❌          | snowAccumulationHeight           | should not be available as personal                        |
+| ❌          | waterSourceConversion            | should not be available as personal                        |
+| ❌          | lavaSourceConversion             | should not be available as personal                        |
+| ❌          | globalSoundEvents                | should not be available as personal                        |
+| ❌          | doVinesSpread                    | should not be available as personal                        |
+| ❌          | minecartMaxSpeed                 | don't wanna / experimental                                 |
+| ❌          | spawnChunkRadius                 | should not be available as personal                        |
 
 </details>
 
