@@ -2,7 +2,6 @@ package dev.rvbsm.ilmater.mixin.personalrule;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -12,7 +11,6 @@ import net.minecraft.world.spawner.PhantomSpawner;
 
 import dev.rvbsm.ilmater.player.PersonalRulesHelper;
 
-@Debug(export = true)
 @Mixin(PhantomSpawner.class)
 public abstract class PhantomSpawnerMixin_doInsomnia {
 

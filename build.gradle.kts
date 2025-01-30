@@ -15,18 +15,14 @@ group = "dev.rvbsm"
 base.archivesName = rootProject.name
 
 loom {
-    // accessWidenerPath = rootProject.file("src/main/resources/${rootProject.name}.accesswidener")
-
     splitEnvironmentSourceSets()
     mods.register(name) {
         sourceSet("main")
-//        sourceSet("client")
     }
 
     runConfigs.all {
         ideConfigGenerated(true)
         runDir = "run"
-        vmArgs("-Dmixin.debug.export=true")
     }
 }
 
