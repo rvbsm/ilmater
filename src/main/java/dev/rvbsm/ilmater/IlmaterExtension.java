@@ -1,19 +1,13 @@
 package dev.rvbsm.ilmater;
 
-import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
-
-import net.minecraft.command.CommandRegistryAccess;
-import net.minecraft.server.command.ServerCommandSource;
 
 import net.fabricmc.api.ModInitializer;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 
 import java.util.Map;
-
-import dev.rvbsm.ilmater.command.PersonalRuleCommand;
 
 public final class IlmaterExtension implements ModInitializer, CarpetExtension {
 
@@ -29,11 +23,6 @@ public final class IlmaterExtension implements ModInitializer, CarpetExtension {
     @Override
     public void onGameStarted() {
         CarpetServer.settingsManager.parseSettingsClass(IlmaterSettings.class);
-    }
-
-    @Override
-    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess registry) {
-        PersonalRuleCommand.register(dispatcher, registry);
     }
 
     @Override
