@@ -12,7 +12,7 @@
     "issues": "https://github.com/rvbsm/ilmater/issues"
   },
   "license": "MIT",
-  "icon": "/assets/ilmater/icon.png",
+  "icon": "assets/ilmater/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
