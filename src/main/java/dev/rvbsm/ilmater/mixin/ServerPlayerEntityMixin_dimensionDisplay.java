@@ -34,18 +34,6 @@ public abstract class ServerPlayerEntityMixin_dimensionDisplay extends PlayerEnt
         super(world, pos, yaw, gameProfile);
     }
 
-    @Inject(method = "teleportTo*", at = @At("TAIL"))
-    private void onDimensionChanged(
-        CallbackInfoReturnable<ServerPlayerEntity> cir,
-        @Local PlayerManager playerManager
-    ) {
-        if (IlmaterSettings.dimensionDisplay) {
-            playerManager.sendToAll(new PlayerListS2CPacket(
-                PlayerListS2CPacket.Action.UPDATE_DISPLAY_NAME,
-                (ServerPlayerEntity) (Object) this));
-        }
-    }
-
     @ModifyReturnValue(method = "getPlayerListName", at = @At("RETURN"))
     private Text appendDimension(@Nullable Text original) {
         if (IlmaterSettings.dimensionDisplay) {

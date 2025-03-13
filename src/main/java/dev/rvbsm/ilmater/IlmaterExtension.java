@@ -3,10 +3,14 @@ package dev.rvbsm.ilmater;
 import com.mojang.logging.LogUtils;
 import org.slf4j.Logger;
 
+import net.minecraft.network.packet.s2c.play.PlayerListS2CPacket;
+import net.minecraft.server.MinecraftServer;
+
 import net.fabricmc.api.ModInitializer;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 
+import java.util.EnumSet;
 import java.util.Map;
 
 public final class IlmaterExtension implements ModInitializer, CarpetExtension {
@@ -23,6 +27,18 @@ public final class IlmaterExtension implements ModInitializer, CarpetExtension {
     @Override
     public void onGameStarted() {
         CarpetServer.settingsManager.parseSettingsClass(IlmaterSettings.class);
+    }
+
+    @Override
+    public void onTick(MinecraftServer server) {
+        if (server.getTicks() % 20 != 0) {
+            return;
+        }
+
+        server.getPlayerManager()
+            .sendToAll(new PlayerListS2CPacket(
+                EnumSet.of(PlayerListS2CPacket.Action.UPDATE_DISPLAY_NAME),
+                server.getPlayerManager().getPlayerList()));
     }
 
     @Override

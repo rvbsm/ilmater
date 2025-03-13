@@ -21,7 +21,7 @@ public final class IlmaterSettings {
     @Rule(categories = {IlmaterExtension.ID, RuleCategory.FEATURE})
     public static boolean cryingPortals = false;
 
-    @Rule(categories = {IlmaterExtension.ID, RuleCategory.FEATURE}, validators = DimensionDisplayValidator.class)
+    @Rule(categories = {IlmaterExtension.ID, RuleCategory.FEATURE})
     public static boolean dimensionDisplay = false;
 
     @Rule(categories = {IlmaterExtension.ID, RuleCategory.BUGFIX})
@@ -40,27 +40,6 @@ public final class IlmaterSettings {
         validators = TimeValidator.class)
     public static String vaultCooldown = "false";
     public static long vaultCooldownTicks = -1;
-
-    private static final class DimensionDisplayValidator extends Validator<Boolean> {
-
-        @Override
-        public Boolean validate(
-            @Nullable ServerCommandSource source,
-            CarpetRule<Boolean> changingRule,
-            Boolean newValue,
-            String userInput
-        ) {
-            if (source != null) {
-                final PlayerManager playerManager = source.getServer().getPlayerManager();
-
-                playerManager.sendToAll(new PlayerListS2CPacket(
-                    EnumSet.of(PlayerListS2CPacket.Action.UPDATE_DISPLAY_NAME),
-                    playerManager.getPlayerList()));
-            }
-
-            return newValue;
-        }
-    }
 
     private static final class TimeValidator extends Validator<String> {
 
