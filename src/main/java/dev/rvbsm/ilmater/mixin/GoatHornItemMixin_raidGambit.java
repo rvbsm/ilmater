@@ -10,7 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.SpellcastingIllagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.raid.RaiderEntity;
 import net.minecraft.item.GoatHornItem;
 import net.minecraft.item.Instrument;
 import net.minecraft.registry.tag.EntityTypeTags;
@@ -40,19 +42,23 @@ public abstract class GoatHornItemMixin_raidGambit {
         @Local Instrument instrument
     ) {
         if (IlmaterSettings.raidGambit && world instanceof ServerWorld serverWorld) {
-            final Collection<? extends MobEntity> raiders;
+            final Collection<? extends RaiderEntity> raiders;
 
             final Raid raid = serverWorld.getRaidAt(user.getBlockPos());
             if (raid != null && raid.isActive()) {
                 raiders = raid.getAllRaiders();
             } else {
                 final Box hornRange = new Box(user.getBlockPos()).expand(Math.min(instrument.range(), 64));
-                raiders = serverWorld.getEntitiesByClass(MobEntity.class, hornRange, RAIDER_PREDICATE);
+                raiders = serverWorld.getEntitiesByClass(RaiderEntity.class, hornRange, RAIDER_PREDICATE);
             }
 
-            for (final MobEntity raider : raiders) {
+            for (final RaiderEntity raider : raiders) {
+                // evokers ignore distance when they have a target
+                if (!(raider instanceof SpellcastingIllagerEntity)) {
+                    raider.setTarget(user);
+                }
+
                 raider.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 60));
-                raider.setTarget(user);
             }
         }
     }
