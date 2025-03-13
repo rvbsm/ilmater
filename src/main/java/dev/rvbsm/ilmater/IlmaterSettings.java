@@ -25,10 +25,13 @@ public final class IlmaterSettings {
     public static boolean dimensionDisplay = false;
 
     @Rule(categories = {IlmaterExtension.ID, RuleCategory.BUGFIX})
-    public static Boolean loyalVoid = true;
+    public static boolean loyalVoid = true;
 
     @Rule(categories = {IlmaterExtension.ID, RuleCategory.SURVIVAL, RuleCategory.FEATURE})
-    public static Boolean raidGambit = false;
+    public static boolean raidGambit = false;
+
+    @Rule(categories = {IlmaterExtension.ID, RuleCategory.SURVIVAL, RuleCategory.FEATURE})
+    public static boolean recoveryItems = false;
 
     @Rule(
         categories = {IlmaterExtension.ID, RuleCategory.SURVIVAL, RuleCategory.FEATURE},
@@ -47,7 +50,7 @@ public final class IlmaterSettings {
             Boolean newValue,
             String userInput
         ) {
-            if (newValue && source != null) {
+            if (source != null) {
                 final PlayerManager playerManager = source.getServer().getPlayerManager();
 
                 playerManager.sendToAll(new PlayerListS2CPacket(

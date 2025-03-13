@@ -26,7 +26,7 @@ import java.util.function.Predicate;
 import dev.rvbsm.ilmater.IlmaterSettings;
 
 @Mixin(GoatHornItem.class)
-public class GoatHornItemMixin_raidGambit {
+public abstract class GoatHornItemMixin_raidGambit {
 
     @Unique
     private static final Predicate<MobEntity> RAIDER_PREDICATE = (entity) -> entity.isAlive() &&

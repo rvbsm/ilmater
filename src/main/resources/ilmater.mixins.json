@@ -4,8 +4,10 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "GoatHornItemMixin_raidGambit",
+    "ItemStackEntityMixin_recoveryItems",
     "NetherPortalMixin_cryingPortals",
     "ServerPlayerEntityMixin_dimensionDisplay",
+    "ServerPlayerEntityMixin_recoveryItems",
     "TridentEntityMixin_loyalVoid",
     "VaultBlockEntityMixin_vaultCooldown",
     "VaultBlockEntityMixin_vaultCooldown$ServerMixin",
