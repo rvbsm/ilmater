@@ -4,86 +4,6 @@ silly carpet extension for a private server
 
 ## Features
 
-### `commandPersonalRule`
-
-Enables /personalrule command to set per-player gamerules.
-
-* Type: `string`
-* Default: `false`
-* Options: `true`, `false`, `ops`, `0`, `1`, `2`, `3`, `4`
-* Categories: `Ilmater`, `command`, `experimental`
-
-#### `allowedPersonalRules`
-
-List of allowed gamerules for players to use.
-Use csv, like 'keepInventory,naturalRegeneration' for multiple rules, or 'all' for everything
-
-* Type: `string`
-* Default: `all`
-* Options: `all`, `keepInventory`, `doMobLoot,naturalRegeneration`, any other supported gamerules
-* Categories: `Ilmater`, `survival`, `creative`, `experimental`
-
-<details>
-<summary>List of supported personal rules</summary>
-
-| Status     | Gamerule                         | Note                                                       |
-|------------|----------------------------------|------------------------------------------------------------|
-| ✅          | keepInventory                    | the player, or the attacker                                |
-| ✅          | doMobLoot                        |                                                            |
-| ✅          | projectilesCanBreakBlocks        | owner of the projectile                                    |
-| ✅          | doTileDrops                      |                                                            |
-| ✅          | doEntityDrops                    |                                                            |
-| ✅          | naturalRegeneration              |                                                            |
-| ✅          | disableRaids                     | the raid will be invalidated if all players disabled raids |
-| ✅          | doInsomnia                       |                                                            |
-| ✅          | doImmediateRespawn               |                                                            |
-| ✅          | playersNetherPortalDefaultDelay  |                                                            |
-| ✅          | playersNetherPortalCreativeDelay |                                                            |
-| ✅          | drowningDamage                   |                                                            |
-| ✅          | fallDamage                       |                                                            |
-| ✅          | fireDamage                       |                                                            |
-| ✅          | freezeDamage                     |                                                            |
-| not tested | doPatrolSpawning                 |                                                            |
-| not tested | doTraderSpawning                 |                                                            |
-| ✅          | doWardenSpawning                 |                                                            |
-| ✅          | forgiveDeadPlayers               |                                                            |
-| ✅          | enderPearlsVanishOnDeath         |                                                            |
-| ❌          | doFireTick                       | should not be available as personal                        |
-| ❌          | mobGriefing                      | should not be available as personal                        |
-| ❌          | doMobSpawning                    | don't wanna                                                |
-| ❌          | commandBlockOutput               | should not be available as personal                        |
-| ❌          | doDaylightCycle                  | no? i mean, send different daytime?                        |
-| ❌          | logAdminCommands                 | should not be available as personal                        |
-| ❌          | showDeathMessages                | should not be available as personal                        |
-| ❌          | randomTickSpeed                  | should not be available as personal                        |
-| ❌          | sendCommandFeedback              | should not be available as personal                        |
-| ❌          | reducedDebugInfo                 | should not be available as personal                        |
-| ❌          | spectatorsGenerateChunks         | don't wanna                                                |
-| ❌          | spawnRadius                      | should not be available as personal                        |
-| ❌          | disablePlayerMovementCheck       | should not be available as personal                        |
-| ❌          | disableElytraMovementCheck       | should not be available as personal                        |
-| ❌          | maxEntityCramming                | should not be available as personal                        |
-| ❌          | doWeatherCycle                   | same as `doDaylightCycle`                                  |
-| ❌          | doLimitedCrafting                | should not be available as personal                        |
-| ❌          | maxCommandChainLength            | should not be available as personal                        |
-| ❌          | maxCommandForkCount              | should not be available as personal                        |
-| ❌          | commandModificationBlockLimit    | should not be available as personal                        |
-| ❌          | announceAdvancements             | should not be available as personal                        |
-| ❌          | universalAnger                   | should not be available as personal                        |
-| ❌          | playersSleepingPercentage        | should not be available as personal                        |
-| ❌          | blockExplosionDropDecay          | should not be available as personal                        |
-| ❌          | mobExplosionDropDecay            | is not possible?                                           |
-| ❌          | tntExplosionDropDecay            | is not possible?                                           |
-| ❌          | snowAccumulationHeight           | should not be available as personal                        |
-| ❌          | waterSourceConversion            | should not be available as personal                        |
-| ❌          | lavaSourceConversion             | should not be available as personal                        |
-| ❌          | globalSoundEvents                | should not be available as personal                        |
-| ❌          | doVinesSpread                    | should not be available as personal                        |
-| ❌          | minecartMaxSpeed                 | don't wanna / experimental                                 |
-| ❌          | spawnChunkRadius                 | should not be available as personal                        |
-
-</details>
-
 ### `cryingPortals`
 
 Allows Crying Obsidian to be used in Nether portals frame.
@@ -111,6 +31,15 @@ Tridents with Loyalty enchantment will not be consumed by the void and will retu
 ### `raidGambit`
 
 Using a goat horn applies the Glowing effect to raiders and makes a user their target
+
+* Type: `boolean`
+* Default: `false`
+* Categories: `Ilmater`, `survival`, `feature`
+
+### `recoveryItems`
+
+While holding a recovery compass, dropped items within view distance will glow and will not despawn.
+The glowing items are only visible to the player holding the recovery compass
 
 * Type: `boolean`
 * Default: `false`
