@@ -1,6 +1,4 @@
-# erm, hi
-
-silly carpet extension for a private server
+# Carpet Ilmater Addition
 
 ## Features
 
